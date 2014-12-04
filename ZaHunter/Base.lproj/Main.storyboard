@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H0o-Nt-6lZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--List Pizzas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ListPizzasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,108 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-s0-vFk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sq1-j3-dr4">
+                                    <rect key="frame" x="0.0" y="-21" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="BLM-O3-CYs">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BLM-O3-CYs" id="D8W-PL-1g6">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hfb-Xs-Ml3"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gx4-i7-wGh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SdN-s0-vFk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JFc-Wt-1BI"/>
+                            <constraint firstAttribute="bottom" secondItem="SdN-s0-vFk" secondAttribute="bottom" id="TMQ-vU-YJl"/>
+                            <constraint firstAttribute="trailing" secondItem="SdN-s0-vFk" secondAttribute="trailing" id="cga-Vy-E6p"/>
+                            <constraint firstItem="SdN-s0-vFk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tC5-Fu-Zry"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="List Pizzas" image="literature-50" id="ddY-vT-loi"/>
+                    <connections>
+                        <outlet property="tableView" destination="SdN-s0-vFk" id="gf1-87-c64"/>
+                        <outlet property="timeToPizzaLabel" destination="Sq1-j3-dr4" id="KIu-VD-dDx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1170" y="-24"/>
+        </scene>
+        <!--Map Pizzas-->
+        <scene sceneID="4Dq-bC-BXg">
+            <objects>
+                <viewController id="mIs-JE-brf" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mWf-0m-u8s"/>
+                        <viewControllerLayoutGuide type="bottom" id="ONW-Hk-P7i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V1z-V6-R2I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="13z-Vg-Ra3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mIs-JE-brf" id="tgo-Hg-Rkl"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="13z-Vg-Ra3" secondAttribute="trailing" id="54e-h1-KUQ"/>
+                            <constraint firstAttribute="bottom" secondItem="13z-Vg-Ra3" secondAttribute="bottom" id="5ey-sp-Ke4"/>
+                            <constraint firstItem="13z-Vg-Ra3" firstAttribute="leading" secondItem="V1z-V6-R2I" secondAttribute="leading" id="GyG-g0-hAJ"/>
+                            <constraint firstItem="13z-Vg-Ra3" firstAttribute="top" secondItem="V1z-V6-R2I" secondAttribute="top" id="llK-be-May"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map Pizzas" image="geography-50" id="y1Y-rp-44R"/>
+                    <connections>
+                        <outlet property="mapView" destination="13z-Vg-Ra3" id="tCk-9C-sxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iat-Rd-foU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170" y="704"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="heD-CM-gTc">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H0o-Nt-6lZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="eVb-oa-VM3">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="H42-EI-G7D"/>
+                        <segue destination="mIs-JE-brf" kind="relationship" relationship="viewControllers" id="THZ-ix-0mi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4L6-T5-Nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="330"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="geography-50" width="25" height="25"/>
+        <image name="literature-50" width="25" height="25"/>
+    </resources>
 </document>

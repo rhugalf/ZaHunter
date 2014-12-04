@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController
+@interface ListPizzasViewController : UIViewController
 
+@property NSMutableArray *fourNearPizzas;
+
+-(void)findNearPizzas:(CLLocation *) loc;
 
 @end
 
