@@ -46,7 +46,7 @@
 
 -(void)findNearPizzas:(CLLocation *)loc{
     MKLocalSearchRequest *request = [MKLocalSearchRequest new];
-    request.naturalLanguageQuery = @"hotel";
+    request.naturalLanguageQuery = @"pizza";
     self.listPizzas = [[NSMutableArray alloc]init];
     //request.region = MKCoordinateRegionMake(loc.coordinate, MKCoordinateSpanMake(1, 1));
     request.region = MKCoordinateRegionMakeWithDistance(loc.coordinate, 10000, 10000);
@@ -104,8 +104,8 @@
             [eta calculateETAWithCompletionHandler:^(MKETAResponse *response, NSError *error)
              {
                  self.totalTravelTime += (response.expectedTravelTime / 60) + 50;
-                 self.timeToPizzaLabel.text = [NSString stringWithFormat:@"Pizza tour time: %.0f minutes!", self.totalTravelTime];
-                 //NSLog(@"%lu", (unsigned long)self.closestPizzerias.count); // Why does this run 8 times randomly?
+                 self.timeToPizzaLabel.text = [NSString stringWithFormat:@"IS: %.0f minutes far from you!", self.totalTravelTime];
+
              }];
             previousLocation = pzz;
         }

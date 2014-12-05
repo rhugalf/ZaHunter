@@ -8,6 +8,12 @@
 
 #import "Pizzeria.h"
 
+@interface Pizzeria()
+
+@property (readwrite) NSString *title;
+
+@end
+
 @implementation Pizzeria
 
 -(instancetype) init{
@@ -23,6 +29,7 @@
     self.name = mapItem.name;
     self.phoneNumber = mapItem.phoneNumber;
     self.coordinate=mapItem.placemark.location.coordinate;
+    self.title=self.name;
     return self;
 }
 

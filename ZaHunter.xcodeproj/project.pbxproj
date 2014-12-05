@@ -17,6 +17,7 @@
 		F00AE7B11A30049E0020B49A /* Pizzeria.m in Sources */ = {isa = PBXBuildFile; fileRef = F00AE7B01A30049E0020B49A /* Pizzeria.m */; };
 		F00AE7B31A3004D10020B49A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00AE7B21A3004D10020B49A /* MapKit.framework */; };
 		F00AE7B61A3051860020B49A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00AE7B51A3051860020B49A /* MapViewController.m */; };
+		F00AE7B91A317CE40020B49A /* DetailPizzaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F00AE7B81A317CE40020B49A /* DetailPizzaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		F00AE7B21A3004D10020B49A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F00AE7B41A3051860020B49A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		F00AE7B51A3051860020B49A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		F00AE7B71A317CE40020B49A /* DetailPizzaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailPizzaViewController.h; sourceTree = "<group>"; };
+		F00AE7B81A317CE40020B49A /* DetailPizzaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailPizzaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				F00AE7931A2EE17F0020B49A /* Main.storyboard */,
 				F00AE7B41A3051860020B49A /* MapViewController.h */,
 				F00AE7B51A3051860020B49A /* MapViewController.m */,
+				F00AE7B71A317CE40020B49A /* DetailPizzaViewController.h */,
+				F00AE7B81A317CE40020B49A /* DetailPizzaViewController.m */,
 				F00AE7961A2EE17F0020B49A /* Images.xcassets */,
 				F00AE7981A2EE17F0020B49A /* LaunchScreen.xib */,
 				F00AE7AF1A30049E0020B49A /* Pizzeria.h */,
@@ -235,6 +240,7 @@
 			files = (
 				F00AE7921A2EE17F0020B49A /* ListPizzasViewController.m in Sources */,
 				F00AE78F1A2EE17F0020B49A /* AppDelegate.m in Sources */,
+				F00AE7B91A317CE40020B49A /* DetailPizzaViewController.m in Sources */,
 				F00AE7B61A3051860020B49A /* MapViewController.m in Sources */,
 				F00AE78C1A2EE17F0020B49A /* main.m in Sources */,
 				F00AE7B11A30049E0020B49A /* Pizzeria.m in Sources */,
